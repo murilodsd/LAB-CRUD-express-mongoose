@@ -1,6 +1,6 @@
 import mongoose from "mongoose";
 
-export default async function connect() {
+async function connect() {
   try {
     const dbConnection = await mongoose.connect(process.env.MONGODB_URI);
 
@@ -10,4 +10,6 @@ export default async function connect() {
   } catch (error) {
     console.log(error);
   }
-}
+};
+
+export default connect;
